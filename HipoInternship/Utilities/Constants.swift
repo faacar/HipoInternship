@@ -14,6 +14,7 @@ enum HipoColors {
     static let cellBackgroundColor = UIColor(red: 0.9803921568627451, green: 0.984313725490196, blue: 0.9882352941176471, alpha: 1.0)
     static let grayButtonColor = UIColor(red: 0.16862745098039217, green: 0.19215686274509805, blue: 0.21568627450980393, alpha: 1.0)
     static let greenButtonColor = UIColor(red: 0.17647058823529413, green: 0.7294117647058823, blue: 0.30980392156862746, alpha: 1.0)
+    static let appleLogoColor = UIColor(red: 0.26666666666666666, green: 0.26666666666666666, blue: 0.26666666666666666, alpha: 1.0)
 }
 
 enum HipoFonts {
@@ -21,5 +22,9 @@ enum HipoFonts {
     static let robotoBold = "Roboto-Bold"
     static let robotoMedium = "Roboto-Medium"
     static let robotoRegular = "Roboto-Regular"
+}
 
+enum HipoImages {
+    static let androidLogo = "androidLogo"
+    static let appleLogo = "applelogo"
 }
