@@ -18,7 +18,7 @@ struct Members: Codable {
     let age: Int
     let location: String
     let github: String
-    let hipoInfo: HipoInfo
+    let hipo: HipoInfo
 }
 
 struct HipoInfo: Codable {

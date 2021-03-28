@@ -12,6 +12,7 @@ class MembersViewController: UIViewController {
     
     var tableView = UITableView()
     let buttonViewController = ButtonViewController()
+    let hipoData = DataLoader()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,8 +22,8 @@ class MembersViewController: UIViewController {
         configureNavigationController()
         configureTableView()
         configureUI()
-        
     }
+
     private func addChildVC() {
         addChild(buttonViewController)
         view.addSubview(buttonViewController.view)
@@ -75,12 +76,12 @@ extension MembersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return hipoData.hipoModel.members.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MembersCell.cellId) as! MembersCell
-        cell.membersNameLabel.text = "abc"
+        cell.membersNameLabel.text = hipoData.hipoModel.members[indexPath.section].name
         return cell
     }
     
