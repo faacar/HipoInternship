@@ -3,27 +3,55 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		72644C8D260FBDC500D95466 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644C8C260FBDC500D95466 /* AppDelegate.swift */; };
 		72644C8F260FBDC500D95466 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644C8E260FBDC500D95466 /* SceneDelegate.swift */; };
 		72644C91260FBDC500D95466 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644C90260FBDC500D95466 /* ViewController.swift */; };
-		72644C94260FBDC500D95466 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72644C92260FBDC500D95466 /* Main.storyboard */; };
 		72644C96260FBDC800D95466 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72644C95260FBDC800D95466 /* Assets.xcassets */; };
 		72644C99260FBDC800D95466 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72644C97260FBDC800D95466 /* LaunchScreen.storyboard */; };
+		72644CA5260FBE4700D95466 /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644CA4260FBE4700D95466 /* MembersViewController.swift */; };
+		72644CB0260FBE8B00D95466 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644CAF260FBE8B00D95466 /* Constants.swift */; };
+		72644CB3260FBE9200D95466 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644CB2260FBE9200D95466 /* String+Ext.swift */; };
+		72644CB9260FBEB700D95466 /* HipoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644CB8260FBEB700D95466 /* HipoLabel.swift */; };
+		72644CBD260FBEC200D95466 /* MembersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644CBC260FBEC200D95466 /* MembersCell.swift */; };
+		72644CC0260FBEC800D95466 /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644CBF260FBEC800D95466 /* ButtonViewController.swift */; };
+		72644CC7260FBEEA00D95466 /* hipo.json in Resources */ = {isa = PBXBuildFile; fileRef = 72644CC6260FBEEA00D95466 /* hipo.json */; };
+		72644CCD260FC00600D95466 /* HipoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644CCC260FC00600D95466 /* HipoModel.swift */; };
+		72644CCF260FCE9100D95466 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72644CC2260FBEE600D95466 /* Roboto-Black.ttf */; };
+		72644CD1260FCE9300D95466 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72644CC4260FBEE600D95466 /* Roboto-Bold.ttf */; };
+		72644CD3260FCE9500D95466 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72644CC5260FBEE600D95466 /* Roboto-Medium.ttf */; };
+		72644CD4260FCE9700D95466 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72644CC3260FBEE600D95466 /* Roboto-Regular.ttf */; };
+		72644CDA261083CD00D95466 /* AddNewMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644CD9261083CD00D95466 /* AddNewMemberViewController.swift */; };
+		EEBF59AEE78189378BFC082C /* Pods_HipoInternship.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7678C5222DD74DD27748764 /* Pods_HipoInternship.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B619ADEB39751EEDAA508F5 /* Pods-HipoInternship.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipoInternship.release.xcconfig"; path = "Target Support Files/Pods-HipoInternship/Pods-HipoInternship.release.xcconfig"; sourceTree = "<group>"; };
 		72644C89260FBDC500D95466 /* HipoInternship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HipoInternship.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72644C8C260FBDC500D95466 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72644C8E260FBDC500D95466 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		72644C90260FBDC500D95466 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		72644C93260FBDC500D95466 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72644C95260FBDC800D95466 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72644C98260FBDC800D95466 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72644C9A260FBDC800D95466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72644CA4260FBE4700D95466 /* MembersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersViewController.swift; sourceTree = "<group>"; };
+		72644CAF260FBE8B00D95466 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		72644CB2260FBE9200D95466 /* String+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		72644CB8260FBEB700D95466 /* HipoLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HipoLabel.swift; sourceTree = "<group>"; };
+		72644CBC260FBEC200D95466 /* MembersCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MembersCell.swift; sourceTree = "<group>"; };
+		72644CBF260FBEC800D95466 /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		72644CC2260FBEE600D95466 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		72644CC3260FBEE600D95466 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		72644CC4260FBEE600D95466 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		72644CC5260FBEE600D95466 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		72644CC6260FBEEA00D95466 /* hipo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hipo.json; sourceTree = "<group>"; };
+		72644CCC260FC00600D95466 /* HipoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipoModel.swift; sourceTree = "<group>"; };
+		72644CD9261083CD00D95466 /* AddNewMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMemberViewController.swift; sourceTree = "<group>"; };
+		9870C42CBD40A38A219EE13C /* Pods-HipoInternship.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipoInternship.debug.xcconfig"; path = "Target Support Files/Pods-HipoInternship/Pods-HipoInternship.debug.xcconfig"; sourceTree = "<group>"; };
+		B7678C5222DD74DD27748764 /* Pods_HipoInternship.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HipoInternship.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +59,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEBF59AEE78189378BFC082C /* Pods_HipoInternship.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25CB81AFB248E529536876BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9870C42CBD40A38A219EE13C /* Pods-HipoInternship.debug.xcconfig */,
+				5B619ADEB39751EEDAA508F5 /* Pods-HipoInternship.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		72644C80260FBDC500D95466 = {
 			isa = PBXGroup;
 			children = (
 				72644C8B260FBDC500D95466 /* HipoInternship */,
 				72644C8A260FBDC500D95466 /* Products */,
+				25CB81AFB248E529536876BB /* Pods */,
+				B29CB0FA436056E180E1DE46 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +96,147 @@
 		72644C8B260FBDC500D95466 /* HipoInternship */ = {
 			isa = PBXGroup;
 			children = (
-				72644C8C260FBDC500D95466 /* AppDelegate.swift */,
-				72644C8E260FBDC500D95466 /* SceneDelegate.swift */,
-				72644C90260FBDC500D95466 /* ViewController.swift */,
-				72644C92260FBDC500D95466 /* Main.storyboard */,
+				72644CAD260FBE7500D95466 /* Utilities */,
+				72644CAC260FBE6C00D95466 /* Manager */,
+				72644CAA260FBE6100D95466 /* Resource */,
+				72644CA9260FBE5D00D95466 /* Extension */,
+				72644CA8260FBE5500D95466 /* Model */,
+				72644CA7260FBE5200D95466 /* View */,
+				72644CA3260FBE3000D95466 /* Controller */,
+				72644CA2260FBE2800D95466 /* Base */,
 				72644C95260FBDC800D95466 /* Assets.xcassets */,
-				72644C97260FBDC800D95466 /* LaunchScreen.storyboard */,
 				72644C9A260FBDC800D95466 /* Info.plist */,
 			);
 			path = HipoInternship;
+			sourceTree = "<group>";
+		};
+		72644CA2260FBE2800D95466 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				72644C8C260FBDC500D95466 /* AppDelegate.swift */,
+				72644C8E260FBDC500D95466 /* SceneDelegate.swift */,
+				72644C90260FBDC500D95466 /* ViewController.swift */,
+				72644C97260FBDC800D95466 /* LaunchScreen.storyboard */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		72644CA3260FBE3000D95466 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				72644CA4260FBE4700D95466 /* MembersViewController.swift */,
+				72644CBF260FBEC800D95466 /* ButtonViewController.swift */,
+				72644CD9261083CD00D95466 /* AddNewMemberViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		72644CA7260FBE5200D95466 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72644CBB260FBEBB00D95466 /* Cell */,
+				72644CB7260FBEA300D95466 /* Components */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		72644CA8260FBE5500D95466 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				72644CCC260FC00600D95466 /* HipoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		72644CA9260FBE5D00D95466 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				72644CB2260FBE9200D95466 /* String+Ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		72644CAA260FBE6100D95466 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				72644CAE260FBE8000D95466 /* Fonts */,
+				72644CAB260FBE6700D95466 /* json */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		72644CAB260FBE6700D95466 /* json */ = {
+			isa = PBXGroup;
+			children = (
+				72644CC6260FBEEA00D95466 /* hipo.json */,
+			);
+			path = json;
+			sourceTree = "<group>";
+		};
+		72644CAC260FBE6C00D95466 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		72644CAD260FBE7500D95466 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				72644CAF260FBE8B00D95466 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		72644CAE260FBE8000D95466 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				72644CC2260FBEE600D95466 /* Roboto-Black.ttf */,
+				72644CC4260FBEE600D95466 /* Roboto-Bold.ttf */,
+				72644CC5260FBEE600D95466 /* Roboto-Medium.ttf */,
+				72644CC3260FBEE600D95466 /* Roboto-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		72644CB5260FBE9700D95466 /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				72644CB8260FBEB700D95466 /* HipoLabel.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		72644CB6260FBE9D00D95466 /* Button */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Button;
+			sourceTree = "<group>";
+		};
+		72644CB7260FBEA300D95466 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				72644CB5260FBE9700D95466 /* Label */,
+				72644CB6260FBE9D00D95466 /* Button */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		72644CBB260FBEBB00D95466 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				72644CBC260FBEC200D95466 /* MembersCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		B29CB0FA436056E180E1DE46 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7678C5222DD74DD27748764 /* Pods_HipoInternship.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +246,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 72644C9D260FBDC800D95466 /* Build configuration list for PBXNativeTarget "HipoInternship" */;
 			buildPhases = (
+				ED64ADF4947DE5CA40A4386D /* [CP] Check Pods Manifest.lock */,
 				72644C85260FBDC500D95466 /* Sources */,
 				72644C86260FBDC500D95466 /* Frameworks */,
 				72644C87260FBDC500D95466 /* Resources */,
+				FFEB0569A29900C19ADE4042 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,35 +299,81 @@
 			buildActionMask = 2147483647;
 			files = (
 				72644C99260FBDC800D95466 /* LaunchScreen.storyboard in Resources */,
+				72644CD4260FCE9700D95466 /* Roboto-Regular.ttf in Resources */,
+				72644CC7260FBEEA00D95466 /* hipo.json in Resources */,
+				72644CD3260FCE9500D95466 /* Roboto-Medium.ttf in Resources */,
+				72644CD1260FCE9300D95466 /* Roboto-Bold.ttf in Resources */,
 				72644C96260FBDC800D95466 /* Assets.xcassets in Resources */,
-				72644C94260FBDC500D95466 /* Main.storyboard in Resources */,
+				72644CCF260FCE9100D95466 /* Roboto-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ED64ADF4947DE5CA40A4386D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HipoInternship-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFEB0569A29900C19ADE4042 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HipoInternship/Pods-HipoInternship-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HipoInternship/Pods-HipoInternship-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HipoInternship/Pods-HipoInternship-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		72644C85260FBDC500D95466 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72644CB3260FBE9200D95466 /* String+Ext.swift in Sources */,
+				72644CCD260FC00600D95466 /* HipoModel.swift in Sources */,
+				72644CC0260FBEC800D95466 /* ButtonViewController.swift in Sources */,
+				72644CB9260FBEB700D95466 /* HipoLabel.swift in Sources */,
+				72644CB0260FBE8B00D95466 /* Constants.swift in Sources */,
+				72644CA5260FBE4700D95466 /* MembersViewController.swift in Sources */,
 				72644C91260FBDC500D95466 /* ViewController.swift in Sources */,
 				72644C8D260FBDC500D95466 /* AppDelegate.swift in Sources */,
 				72644C8F260FBDC500D95466 /* SceneDelegate.swift in Sources */,
+				72644CBD260FBEC200D95466 /* MembersCell.swift in Sources */,
+				72644CDA261083CD00D95466 /* AddNewMemberViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		72644C92260FBDC500D95466 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				72644C93260FBDC500D95466 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		72644C97260FBDC800D95466 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,6 +503,7 @@
 		};
 		72644C9E260FBDC800D95466 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9870C42CBD40A38A219EE13C /* Pods-HipoInternship.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +523,7 @@
 		};
 		72644C9F260FBDC800D95466 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B619ADEB39751EEDAA508F5 /* Pods-HipoInternship.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
