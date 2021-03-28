@@ -38,7 +38,7 @@ class MembersCell: UITableViewCell {
         
         membersNameLabel.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
-            make.left.equalToSuperview().offset(8)
+            make.left.equalToSuperview().offset(14)
             make.right.equalToSuperview().offset(-150)
         }
     }

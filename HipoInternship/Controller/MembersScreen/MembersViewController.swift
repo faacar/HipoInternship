@@ -43,7 +43,10 @@ class MembersViewController: UIViewController {
     private func configureNavigationController() {
         title = "Members"
         navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: HipoFonts.robotoMedium, size: 20)!]
-        
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.view.backgroundColor = UIColor.clear
     }
     
     private func configureUI() {

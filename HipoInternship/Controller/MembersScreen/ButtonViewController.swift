@@ -10,8 +10,8 @@ import SnapKit
 
 class ButtonViewController: UIViewController {
     
-    let sortMembersButton = UIButton()
-    let addNewMemberButton = UIButton()
+    let sortMembersButton = HipoButton(backgroundColor: HipoColors.grayButtonColor, title: "SORT MEMBERS")
+    let addNewMemberButton = HipoButton(backgroundColor: HipoColors.greenButtonColor, title: "ADD NEW MEMBER")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,22 +24,8 @@ class ButtonViewController: UIViewController {
         view.addSubview(sortMembersButton)
         view.addSubview(addNewMemberButton)
         
-        sortMembersButton.setTitle("SORT MEMBERS", for: .normal)
-        sortMembersButton.backgroundColor = HipoColors.grayButtonColor
-        sortMembersButton.layer.masksToBounds = true
-        sortMembersButton.layer.cornerRadius = 25.0
         sortMembersButton.addTarget(self, action: #selector(sortMembersButtonClicked), for: .touchUpInside)
-        
-        addNewMemberButton.setTitle("ADD NEW MEMBER", for: .normal)
-        addNewMemberButton.backgroundColor = HipoColors.greenButtonColor
-        addNewMemberButton.layer.masksToBounds = true
-        addNewMemberButton.layer.cornerRadius = 25.0
         addNewMemberButton.addTarget(self, action: #selector(addNewMemberButtonClicked), for: .touchUpInside)
-        
-        if let customFont = UIFont(name: HipoFonts.robotoRegular, size: 16) {
-            sortMembersButton.titleLabel!.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFont)
-            addNewMemberButton.titleLabel!.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFont)
-        }
     }
     
     private func configureUI() {

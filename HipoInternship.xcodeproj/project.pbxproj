@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		720842D02610A17000510058 /* HipoButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720842CF2610A17000510058 /* HipoButton.swift */; };
 		72644C8D260FBDC500D95466 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644C8C260FBDC500D95466 /* AppDelegate.swift */; };
 		72644C8F260FBDC500D95466 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644C8E260FBDC500D95466 /* SceneDelegate.swift */; };
 		72644C91260FBDC500D95466 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644C90260FBDC500D95466 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		5B619ADEB39751EEDAA508F5 /* Pods-HipoInternship.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipoInternship.release.xcconfig"; path = "Target Support Files/Pods-HipoInternship/Pods-HipoInternship.release.xcconfig"; sourceTree = "<group>"; };
+		720842CF2610A17000510058 /* HipoButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipoButton.swift; sourceTree = "<group>"; };
 		72644C89260FBDC500D95466 /* HipoInternship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HipoInternship.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72644C8C260FBDC500D95466 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72644C8E260FBDC500D95466 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,23 @@
 				5B619ADEB39751EEDAA508F5 /* Pods-HipoInternship.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		720842CC2610900800510058 /* MembersScreen */ = {
+			isa = PBXGroup;
+			children = (
+				72644CA4260FBE4700D95466 /* MembersViewController.swift */,
+				72644CBF260FBEC800D95466 /* ButtonViewController.swift */,
+			);
+			path = MembersScreen;
+			sourceTree = "<group>";
+		};
+		720842CD2610901A00510058 /* AddNewMembersScreen */ = {
+			isa = PBXGroup;
+			children = (
+				72644CD9261083CD00D95466 /* AddNewMemberViewController.swift */,
+			);
+			path = AddNewMembersScreen;
 			sourceTree = "<group>";
 		};
 		72644C80260FBDC500D95466 = {
@@ -124,9 +143,8 @@
 		72644CA3260FBE3000D95466 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				72644CA4260FBE4700D95466 /* MembersViewController.swift */,
-				72644CBF260FBEC800D95466 /* ButtonViewController.swift */,
-				72644CD9261083CD00D95466 /* AddNewMemberViewController.swift */,
+				720842CD2610901A00510058 /* AddNewMembersScreen */,
+				720842CC2610900800510058 /* MembersScreen */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -210,6 +228,7 @@
 		72644CB6260FBE9D00D95466 /* Button */ = {
 			isa = PBXGroup;
 			children = (
+				720842CF2610A17000510058 /* HipoButton.swift */,
 			);
 			path = Button;
 			sourceTree = "<group>";
@@ -364,6 +383,7 @@
 				72644CB0260FBE8B00D95466 /* Constants.swift in Sources */,
 				72644CA5260FBE4700D95466 /* MembersViewController.swift in Sources */,
 				72644C91260FBDC500D95466 /* ViewController.swift in Sources */,
+				720842D02610A17000510058 /* HipoButton.swift in Sources */,
 				72644C8D260FBDC500D95466 /* AppDelegate.swift in Sources */,
 				72644C8F260FBDC500D95466 /* SceneDelegate.swift in Sources */,
 				72644CBD260FBEC200D95466 /* MembersCell.swift in Sources */,
