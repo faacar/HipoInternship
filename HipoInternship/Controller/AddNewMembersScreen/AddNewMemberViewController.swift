@@ -13,7 +13,9 @@ class AddNewMemberViewController: UIViewController {
     
     let dropDown = DropDown()
     let dropDownView = UIView()
-    var stackView = UIStackView()
+    lazy var stackView = UIStackView()
+    var hipoModel: HipoModel!
+    var teamName: String!
 
     private lazy var nameTextField = HipoTextField(pHolder: "Name", imageName: HipoImages.nameImage)
     private lazy var ageTextField = HipoTextField(pHolder: "Age", imageName: HipoImages.ageImage)
@@ -23,7 +25,7 @@ class AddNewMemberViewController: UIViewController {
     private lazy var yearsInHipoTextField = HipoTextField(pHolder: "Years in Hipo", imageName: HipoImages.yearsInHipo)
     private lazy var teamLabel = HipoLabel(fontSize: 17)
     private lazy var saveButton = HipoButton(backgroundColor: HipoColors.greenButtonColor, title: "Save")
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,6 +35,7 @@ class AddNewMemberViewController: UIViewController {
         configureDropDownView()
         configureDropDown()
         cofigureSaveButton()
+        configureTextFields()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,6 +72,31 @@ class AddNewMemberViewController: UIViewController {
             make.right.equalToSuperview().offset(-10)
             make.height.equalToSuperview().multipliedBy(0.50)
         }
+
+    }
+    
+    private func configureTextFields() {
+        nameTextField.delegate = self
+        nameTextField.tag = 1
+        nameTextField.becomeFirstResponder()
+        
+        ageTextField.delegate = self
+        ageTextField.keyboardType = .numbersAndPunctuation
+
+        ageTextField.tag = 2
+        
+        locationTextField.delegate = self
+        locationTextField.tag = 3
+        
+        githubTextField.delegate = self
+        githubTextField.tag = 4
+        
+        positionTextField.delegate = self
+        positionTextField.tag = 5
+        
+        yearsInHipoTextField.delegate = self
+        yearsInHipoTextField.keyboardType = .numbersAndPunctuation
+        yearsInHipoTextField.tag = 6
 
     }
     
@@ -145,9 +173,10 @@ class AddNewMemberViewController: UIViewController {
             print("index:\(index), title: \(title)")
             if index == 0 { // ios
                 self.configureTeamLabel(imageName: HipoImages.appleLogo, text: "iOS Team")
+                self.teamName = "iOS Team"
             } else {
                 self.configureTeamLabel(imageName: HipoImages.androidLogo, text: "Android Team")
-
+                self.teamName = "Android Team"
             }
         }
     }
@@ -163,7 +192,42 @@ class AddNewMemberViewController: UIViewController {
     }
     
     @objc func saveButtonClicked() {
+        if nameTextField.text == "" || ageTextField.text == "" || locationTextField.text == "" || githubTextField.text == "" || positionTextField.text == "" || yearsInHipoTextField.text == "" || teamName == "" { // team name bug
+            let alertController = UIAlertController(title: "Missing Place", message: "We can't proceed because one of the fields is blank. Please note that all fields are required.", preferredStyle: .alert)
+            let okeyAction = UIAlertAction(title: "Okey", style: .default, handler: nil)
+            
+            alertController.addAction(okeyAction)
+            present(alertController, animated: true, completion: nil)
+            return
+        }
         
+        saveData()
     }
     
+    private func saveData() {
+        let hipoInfo = HipoInfo(position: positionTextField.text!, yearsInHipo: Int(yearsInHipoTextField.text!) ?? 0)
+        let newMember = Members(name: nameTextField.text!,
+                            age: Int(ageTextField.text!) ?? 0,
+                            location: locationTextField.text!,
+                            github: githubTextField.text!,
+                            hipo: hipoInfo)
+        hipoModel = HipoModel(company: "Hipo", team: teamName, members: [newMember])
+        print(hipoModel)
+    }
+    
+}
+
+//MARK: - Extension UITextFieldDelegate
+
+extension AddNewMemberViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if let nextTextField = view.viewWithTag(textField.tag + 1) {
+            textField.resignFirstResponder()
+            nextTextField.becomeFirstResponder()
+        } else {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
 }

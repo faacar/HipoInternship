@@ -9,19 +9,19 @@ import Foundation
 
 struct HipoModel: Codable {
     let company: String
-    let team: String
-    let members: [Members]
+    var team: String
+    var members: [Members]
 }
 
 struct Members: Codable {
-    let name: String
-    let age: Int
-    let location: String
-    let github: String
-    let hipo: HipoInfo
+    var name: String
+    var age: Int
+    var location: String
+    var github: String
+    var hipo: HipoInfo
 }
 
 struct HipoInfo: Codable {
-    let position: String
-    let yearsInHipo: Int
+    var position: String
+    var yearsInHipo: Int
 }
