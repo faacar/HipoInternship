@@ -29,6 +29,7 @@
 		72644CD3260FCE9500D95466 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72644CC5260FBEE600D95466 /* Roboto-Medium.ttf */; };
 		72644CD4260FCE9700D95466 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72644CC3260FBEE600D95466 /* Roboto-Regular.ttf */; };
 		72644CDA261083CD00D95466 /* AddNewMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644CD9261083CD00D95466 /* AddNewMemberViewController.swift */; };
+		72967803261116E3006C8ADC /* HipoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72967802261116E3006C8ADC /* HipoTextField.swift */; };
 		EEBF59AEE78189378BFC082C /* Pods_HipoInternship.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7678C5222DD74DD27748764 /* Pods_HipoInternship.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		72644CC6260FBEEA00D95466 /* hipo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hipo.json; sourceTree = "<group>"; };
 		72644CCC260FC00600D95466 /* HipoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipoModel.swift; sourceTree = "<group>"; };
 		72644CD9261083CD00D95466 /* AddNewMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewMemberViewController.swift; sourceTree = "<group>"; };
+		72967802261116E3006C8ADC /* HipoTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipoTextField.swift; sourceTree = "<group>"; };
 		9870C42CBD40A38A219EE13C /* Pods-HipoInternship.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HipoInternship.debug.xcconfig"; path = "Target Support Files/Pods-HipoInternship/Pods-HipoInternship.debug.xcconfig"; sourceTree = "<group>"; };
 		B7678C5222DD74DD27748764 /* Pods_HipoInternship.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HipoInternship.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -159,7 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				72644CBB260FBEBB00D95466 /* Cell */,
-				72644CB7260FBEA300D95466 /* Components */,
+				72644CB7260FBEA300D95466 /* Component */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,13 +242,14 @@
 			path = Button;
 			sourceTree = "<group>";
 		};
-		72644CB7260FBEA300D95466 /* Components */ = {
+		72644CB7260FBEA300D95466 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				72967805261116E7006C8ADC /* TextField */,
 				72644CB5260FBE9700D95466 /* Label */,
 				72644CB6260FBE9D00D95466 /* Button */,
 			);
-			path = Components;
+			path = Component;
 			sourceTree = "<group>";
 		};
 		72644CBB260FBEBB00D95466 /* Cell */ = {
@@ -257,6 +260,14 @@
 				720842EB2610FCD600510058 /* DropDownCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		72967805261116E7006C8ADC /* TextField */ = {
+			isa = PBXGroup;
+			children = (
+				72967802261116E3006C8ADC /* HipoTextField.swift */,
+			);
+			path = TextField;
 			sourceTree = "<group>";
 		};
 		B29CB0FA436056E180E1DE46 /* Frameworks */ = {
@@ -395,6 +406,7 @@
 				72644CA5260FBE4700D95466 /* MembersViewController.swift in Sources */,
 				72644C91260FBDC500D95466 /* ViewController.swift in Sources */,
 				720842D02610A17000510058 /* HipoButton.swift in Sources */,
+				72967803261116E3006C8ADC /* HipoTextField.swift in Sources */,
 				72644C8D260FBDC500D95466 /* AppDelegate.swift in Sources */,
 				720842EC2610FCD600510058 /* DropDownCell.swift in Sources */,
 				72644C8F260FBDC500D95466 /* SceneDelegate.swift in Sources */,

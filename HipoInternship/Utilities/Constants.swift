@@ -27,4 +27,11 @@ enum HipoFonts {
 enum HipoImages {
     static let androidLogo = "androidLogo"
     static let appleLogo = "applelogo"
+    static let nameImage = "personIcon"
+    static let githubImage = "githubLogo"
+    static let locationImage = "mapIcon"
+    static let ageImage = "calendarIcon"
+    static let yearsInHipo = "hipoLogo"
+    static let positionImage = "keyboardIcon"
+    static let teamImage = "teamIcon"
 }
