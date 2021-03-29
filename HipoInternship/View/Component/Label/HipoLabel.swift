@@ -35,4 +35,30 @@ class HipoLabel: UILabel {
         minimumScaleFactor = 0.9
         lineBreakMode = .byTruncatingTail
     }
+    
+    let test = NSTextAttachment()
+    
+}
+
+extension HipoLabel {
+    func configureTeamLabel(imageName: String, text: String, hipoLabel: inout HipoLabel) {
+        let imageAttachment = NSTextAttachment()
+        //let hipoLabel = hipoLabel
+        imageAttachment.image = UIImage(named: imageName) ?? UIImage(systemName: imageName)
+        
+        imageAttachment.bounds = CGRect(x: 0, y: -3, width: imageAttachment.image!.size.width, height: imageAttachment.image!.size.height)
+        let attachmentString = NSAttributedString(attachment: imageAttachment)
+        
+        let completeText = NSMutableAttributedString(string: " ")
+        completeText.append(attachmentString)
+        
+        let textAfterIcon = NSAttributedString(string: "  \(text)")
+        
+        completeText.append(textAfterIcon)
+        
+        hipoLabel.textAlignment = .left
+        hipoLabel.attributedText = completeText
+        hipoLabel.backgroundColor = HipoColors.cellBackgroundColor
+        
+    }
 }

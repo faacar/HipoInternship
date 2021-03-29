@@ -29,18 +29,20 @@ class AddNewMemberViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        configureTeamLabel(imageName: HipoImages.teamImage, text: "Select Team")
+        teamLabel.configureTeamLabel(imageName: HipoImages.teamImage, text: "Select Team", hipoLabel: &teamLabel)
+
         configureNavigation()
         configureStackView()
         configureDropDownView()
         configureDropDown()
         cofigureSaveButton()
         configureTextFields()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        configureTeamLabel(imageName: HipoImages.teamImage, text: "Select Team")
+        teamLabel.configureTeamLabel(imageName: HipoImages.teamImage, text: "Select Team", hipoLabel: &teamLabel)
     }
     
     private func configureNavigation() {
@@ -78,7 +80,7 @@ class AddNewMemberViewController: UIViewController {
     private func configureTextFields() {
         nameTextField.delegate = self
         nameTextField.tag = 1
-        nameTextField.becomeFirstResponder()
+        nameTextField.becomeFirstResponder() //
         
         ageTextField.delegate = self
         ageTextField.keyboardType = .numbersAndPunctuation
@@ -98,25 +100,6 @@ class AddNewMemberViewController: UIViewController {
         yearsInHipoTextField.keyboardType = .numbersAndPunctuation
         yearsInHipoTextField.tag = 6
 
-    }
-    
-    private func configureTeamLabel(imageName: String, text: String) {
-        let imageAttachment = NSTextAttachment()
-        imageAttachment.image = UIImage(named: imageName) ?? UIImage(systemName: imageName)
-        
-        imageAttachment.bounds = CGRect(x: 0, y: -3, width: imageAttachment.image!.size.width, height: imageAttachment.image!.size.height)
-        let attachmentString = NSAttributedString(attachment: imageAttachment)
-        
-        let completeText = NSMutableAttributedString(string: " ")
-        completeText.append(attachmentString)
-        
-        let textAfterIcon = NSAttributedString(string: "  \(text)")
-        
-        completeText.append(textAfterIcon)
-        
-        teamLabel.textAlignment = .left
-        teamLabel.attributedText = completeText
-        teamLabel.backgroundColor = HipoColors.cellBackgroundColor
     }
     
     private func cofigureSaveButton() {
@@ -169,13 +152,15 @@ class AddNewMemberViewController: UIViewController {
         gesture.numberOfTapsRequired = 1
         dropDownView.addGestureRecognizer(gesture)
         
-        dropDown.selectionAction = { index, title in
+        dropDown.selectionAction = { [self] index, title in
             print("index:\(index), title: \(title)")
             if index == 0 { // ios
-                self.configureTeamLabel(imageName: HipoImages.appleLogo, text: "iOS Team")
+                teamLabel.configureTeamLabel(imageName: HipoImages.appleLogo, text: "iOS Team", hipoLabel: &teamLabel)
+                
                 self.teamName = "iOS Team"
             } else {
-                self.configureTeamLabel(imageName: HipoImages.androidLogo, text: "Android Team")
+                teamLabel.configureTeamLabel(imageName: HipoImages.androidLogo, text: "Android Team", hipoLabel: &teamLabel)
+                
                 self.teamName = "Android Team"
             }
         }
