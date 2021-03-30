@@ -14,7 +14,7 @@ class AddNewMemberViewController: UIViewController {
     let dropDown = DropDown()
     let dropDownView = UIView()
     lazy var stackView = UIStackView()
-    var hipoModel: HipoModel!
+    var hipoMembers = [HipoModel]()
     var teamName: String!
 
     private lazy var nameTextField = HipoTextField(pHolder: "Name", imageName: HipoImages.nameImage)
@@ -25,7 +25,7 @@ class AddNewMemberViewController: UIViewController {
     private lazy var yearsInHipoTextField = HipoTextField(pHolder: "Years in Hipo", imageName: HipoImages.yearsInHipo)
     private lazy var teamLabel = HipoLabel(fontSize: 17)
     private lazy var saveButton = HipoButton(backgroundColor: HipoColors.greenButtonColor, title: "Save")
-        
+            
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,7 +37,6 @@ class AddNewMemberViewController: UIViewController {
         configureDropDown()
         cofigureSaveButton()
         configureTextFields()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,7 +79,7 @@ class AddNewMemberViewController: UIViewController {
     private func configureTextFields() {
         nameTextField.delegate = self
         nameTextField.tag = 1
-        nameTextField.becomeFirstResponder() //
+//        nameTextField.becomeFirstResponder()
         
         ageTextField.delegate = self
         ageTextField.keyboardType = .numbersAndPunctuation
@@ -191,15 +190,16 @@ class AddNewMemberViewController: UIViewController {
     
     private func saveData() {
         let hipoInfo = HipoInfo(position: positionTextField.text!, yearsInHipo: Int(yearsInHipoTextField.text!) ?? 0)
-        let newMember = Members(name: nameTextField.text!,
+        let newMemberInfo = Members(name: nameTextField.text!,
                             age: Int(ageTextField.text!) ?? 0,
                             location: locationTextField.text!,
                             github: githubTextField.text!,
                             hipo: hipoInfo)
-        hipoModel = HipoModel(company: "Hipo", team: teamName, members: [newMember])
-        print(hipoModel)
+        let newMember = HipoModel(company: "Hipo", team: teamName, members: [newMemberInfo])
+        hipoMembers = PersistenceManager.load()
+        hipoMembers.append(newMember)
+        PersistenceManager.save(hipoMembers: hipoMembers)
     }
-    
 }
 
 //MARK: - Extension UITextFieldDelegate

@@ -11,6 +11,8 @@
 		720842D92610AC7200510058 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720842D82610AC7200510058 /* DataLoader.swift */; };
 		720842EC2610FCD600510058 /* DropDownCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 720842EA2610FCD600510058 /* DropDownCell.swift */; };
 		720842ED2610FCD600510058 /* DropDownCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 720842EB2610FCD600510058 /* DropDownCell.xib */; };
+		721E000E26132C3300EC0EBB /* PersistentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721E000D26132C3300EC0EBB /* PersistentManager.swift */; };
+		721E001126133F8C00EC0EBB /* HipoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721E001026133F8C00EC0EBB /* HipoError.swift */; };
 		72644C8D260FBDC500D95466 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644C8C260FBDC500D95466 /* AppDelegate.swift */; };
 		72644C8F260FBDC500D95466 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644C8E260FBDC500D95466 /* SceneDelegate.swift */; };
 		72644C91260FBDC500D95466 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644C90260FBDC500D95466 /* ViewController.swift */; };
@@ -39,6 +41,8 @@
 		720842D82610AC7200510058 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		720842EA2610FCD600510058 /* DropDownCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownCell.swift; sourceTree = "<group>"; };
 		720842EB2610FCD600510058 /* DropDownCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DropDownCell.xib; sourceTree = "<group>"; };
+		721E000D26132C3300EC0EBB /* PersistentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentManager.swift; sourceTree = "<group>"; };
+		721E001026133F8C00EC0EBB /* HipoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipoError.swift; sourceTree = "<group>"; };
 		72644C89260FBDC500D95466 /* HipoInternship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HipoInternship.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72644C8C260FBDC500D95466 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72644C8E260FBDC500D95466 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				720842D82610AC7200510058 /* DataLoader.swift */,
+				721E000D26132C3300EC0EBB /* PersistentManager.swift */,
+				721E001026133F8C00EC0EBB /* HipoError.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -409,8 +415,10 @@
 				72967803261116E3006C8ADC /* HipoTextField.swift in Sources */,
 				72644C8D260FBDC500D95466 /* AppDelegate.swift in Sources */,
 				720842EC2610FCD600510058 /* DropDownCell.swift in Sources */,
+				721E001126133F8C00EC0EBB /* HipoError.swift in Sources */,
 				72644C8F260FBDC500D95466 /* SceneDelegate.swift in Sources */,
 				72644CBD260FBEC200D95466 /* MembersCell.swift in Sources */,
+				721E000E26132C3300EC0EBB /* PersistentManager.swift in Sources */,
 				72644CDA261083CD00D95466 /* AddNewMemberViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

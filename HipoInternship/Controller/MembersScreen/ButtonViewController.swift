@@ -49,6 +49,7 @@ class ButtonViewController: UIViewController {
     
     @objc func sortMembersButtonClicked() {
         //sorting thing
+        print(PersistenceManager.load())
     }
     
     @objc func addNewMemberButtonClicked() {
