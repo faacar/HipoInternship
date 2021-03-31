@@ -23,7 +23,6 @@ class MembersViewController: UIViewController {
 
         hipoData = PersistenceManager.load()
         
-        tableView.reloadData() //
         addChildVC()
         configureNavigationController()
         configureTableView()

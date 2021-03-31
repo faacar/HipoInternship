@@ -197,6 +197,7 @@ class AddNewMemberViewController: UIViewController {
                             location: locationTextField.text!,
                             github: githubTextField.text!,
                             hipo: hipoInfo)
+        hipoMembers = PersistenceManager.load()
         hipoMembers[0].members.append(newMemberInfo)
         print(hipoMembers)
         PersistenceManager.save(hipoMembers: hipoMembers)
