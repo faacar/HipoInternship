@@ -12,12 +12,29 @@ import DropDown
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
+    var hasAlreadyLaunched: Bool!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         DropDown.startListeningToKeyboard()
         print(NSSearchPathForDirectoriesInDomains(.documentationDirectory, .userDomainMask, true).last! as String )
+        
+        
+        hasAlreadyLaunched = UserDefaults.standard.bool(forKey: "hasAlreadyLaunched")
+        
+        //check first launched
+        if (hasAlreadyLaunched) { // launched before
+           hasAlreadyLaunched = true
+            
+        } else { // if its first time
+            UserDefaults.standard.set(true, forKey: "hasAlreadyLaunched")
+        }
+        
         return true
+    }
+    
+    func sethasAlreadyLaunched(){
+        hasAlreadyLaunched = true
     }
 
     // MARK: UISceneSession Lifecycle

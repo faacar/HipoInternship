@@ -12,16 +12,43 @@ class MembersViewController: UIViewController {
     
     var tableView = UITableView()
     let buttonViewController = ButtonViewController()
-    let hipoData = DataLoader()
+    let hipoDataLoader = DataLoader()//
+    var hipoData = [HipoModel]()
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
 
+        hipoData = PersistenceManager.load()
+        
+        tableView.reloadData() //
         addChildVC()
         configureNavigationController()
         configureTableView()
         configureUI()
+    }
+
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        if(!appDelegate.hasAlreadyLaunched){
+              appDelegate.sethasAlreadyLaunched()
+              print("Only run for the first time")
+            
+            //persistent manager'da yazidigim fonksiyonu burada cagircam
+            //var deneme = [HipoModel]()
+            hipoData.append(DataLoader().hipoModel)
+            PersistenceManager.save(hipoMembers: hipoData)
+            print("test:\(hipoData)")
+            print("==============")
+            //print("hipoDataLoader:\(hipoDataLoader.hipoModel.members)")
+        }
+        
+        hipoData = PersistenceManager.load()
+        tableView.reloadData()
     }
 
     private func addChildVC() {
@@ -76,12 +103,22 @@ extension MembersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return hipoData.hipoModel.members.count
+        //return hipoData.hipoModel.members.count
+        print("hipoDataCount:\(hipoData.count)")
+        print("membersCount:\(hipoData[0].members.count)")
+        //print("members:\(hipoData[0].members.count)")
+
+        //return hipoData.count == son kaldirdigim
+        return hipoData[0].members.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MembersCell.cellId) as! MembersCell
-        cell.membersNameLabel.text = hipoData.hipoModel.members[indexPath.section].name
+        //cell.membersNameLabel.text = hipoData.hipoModel.members[indexPath.section].name
+        print("row:\(indexPath.row)")
+        print("section:\(indexPath.section)")
+        //cell.membersNameLabel.text = hipoData[indexPath.section].members[0].name == son kaldirdigim
+        cell.membersNameLabel.text = hipoData[0].members[indexPath.section].name
         return cell
     }
     
@@ -95,6 +132,4 @@ extension MembersViewController: UITableViewDelegate, UITableViewDataSource {
         headerView.backgroundColor = UIColor.clear
         return headerView
     }
-    
-    
 }

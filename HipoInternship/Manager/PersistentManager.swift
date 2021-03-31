@@ -5,13 +5,13 @@
 //  Created by Ahmet Acar on 30.03.2021.
 //
 
-import Foundation
+import Foundation 
 
 
-enum PersistenceManager {
+class PersistenceManager {
     
-    static private let defaults = UserDefaults.standard
-    static private let members = "members"
+    private let defaults = UserDefaults.standard
+    static let members = "members"
 
     static func save(hipoMembers: [HipoModel]) {
         let data = hipoMembers.map { try? JSONEncoder().encode($0) }
@@ -26,6 +26,18 @@ enum PersistenceManager {
 
         return encodedData.map { try! JSONDecoder().decode(HipoModel.self, from: $0) }
     }
+//
+//    public func saveJSON(j: JSON) {
+//        let defaults = NSUserDefaults.standardUserDefaults()
+//        defaults.setValue(j.rawString()!, forKey: "json")
+//        // here I save my JSON as a string
+//    }
+    
+}
 
+extension PersistenceManager {
+    func saveJSONFile() {
+        
+    }
 
 }

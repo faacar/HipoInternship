@@ -13,6 +13,7 @@ class AddNewMemberViewController: UIViewController {
     
     let dropDown = DropDown()
     let dropDownView = UIView()
+    
     lazy var stackView = UIStackView()
     var hipoMembers = [HipoModel]()
     var teamName: String!
@@ -186,6 +187,7 @@ class AddNewMemberViewController: UIViewController {
         }
         
         saveData()
+        dismiss(animated: true, completion: nil)
     }
     
     private func saveData() {
@@ -195,9 +197,8 @@ class AddNewMemberViewController: UIViewController {
                             location: locationTextField.text!,
                             github: githubTextField.text!,
                             hipo: hipoInfo)
-        let newMember = HipoModel(company: "Hipo", team: teamName, members: [newMemberInfo])
-        hipoMembers = PersistenceManager.load()
-        hipoMembers.append(newMember)
+        hipoMembers[0].members.append(newMemberInfo)
+        print(hipoMembers)
         PersistenceManager.save(hipoMembers: hipoMembers)
     }
 }
