@@ -31,7 +31,7 @@ class AddNewMemberViewController: UIViewController {
         super.viewDidLoad()
 
         teamLabel.configureTeamLabel(imageName: HipoImages.teamImage, text: "Select Team", hipoLabel: &teamLabel)
-
+        
         configureNavigation()
         configureStackView()
         configureDropDownView()
@@ -178,14 +178,9 @@ class AddNewMemberViewController: UIViewController {
     
     @objc func saveButtonClicked() {
         if nameTextField.text == "" || ageTextField.text == "" || locationTextField.text == "" || githubTextField.text == "" || positionTextField.text == "" || yearsInHipoTextField.text == "" || teamName == "" { // team name bug
-            let alertController = UIAlertController(title: "Missing Place", message: "We can't proceed because one of the fields is blank. Please note that all fields are required.", preferredStyle: .alert)
-            let okeyAction = UIAlertAction(title: "Okey", style: .default, handler: nil)
-            
-            alertController.addAction(okeyAction)
-            present(alertController, animated: true, completion: nil)
+            presentAlert(title: "Missing Place", message: "We can't proceed because one of the fields is blank. Please note that all fields are required.")
             return
         }
-        
         saveData()
         dismiss(animated: true, completion: nil)
     }
@@ -218,3 +213,4 @@ extension AddNewMemberViewController: UITextFieldDelegate {
         return true
     }
 }
+

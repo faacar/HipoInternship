@@ -26,18 +26,5 @@ class PersistenceManager {
 
         return encodedData.map { try! JSONDecoder().decode(HipoModel.self, from: $0) }
     }
-//
-//    public func saveJSON(j: JSON) {
-//        let defaults = NSUserDefaults.standardUserDefaults()
-//        defaults.setValue(j.rawString()!, forKey: "json")
-//        // here I save my JSON as a string
-//    }
-    
 }
 
-extension PersistenceManager {
-    func saveJSONFile() {
-        
-    }
-
-}

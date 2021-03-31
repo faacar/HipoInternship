@@ -52,16 +52,13 @@ class ButtonViewController: UIViewController {
         print(PersistenceManager.load())
     }
     
-    @objc func addNewMemberButtonClicked() {
-
-        let key = UIApplication.shared.windows.first { $0.isKeyWindow }
-        var topVC = key!.rootViewController
-           while((topVC!.presentedViewController) != nil) {
-               topVC = topVC!.presentedViewController
-           }
-           let customViewController = AddNewMemberViewController()
-           let navController = UINavigationController(rootViewController: customViewController)
-           topVC?.present(navController, animated: true, completion: nil)
+    @objc func addNewMemberButtonClicked() {     
+        let vc = AddNewMemberViewController()
+        let navController = UINavigationController(rootViewController: vc)
+        navController.modalPresentationStyle = .formSheet
+        present(navController, animated: true, completion: nil)
+        
+        
         
     }
     
