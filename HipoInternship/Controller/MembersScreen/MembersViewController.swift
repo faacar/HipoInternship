@@ -90,6 +90,14 @@ class MembersViewController: UIViewController {
 //MARK: - Extension UITableViewDelegate, UITableViewDataSource
 
 extension MembersViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let destinationVC = MembersInfoViewController()
+        destinationVC.membersInfo = PersistenceManager.load()[0].members[indexPath.section]
+        navigationController?.pushViewController(destinationVC, animated: true)
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }

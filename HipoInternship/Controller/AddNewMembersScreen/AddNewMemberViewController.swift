@@ -153,7 +153,6 @@ class AddNewMemberViewController: UIViewController {
         dropDownView.addGestureRecognizer(gesture)
         
         dropDown.selectionAction = { [self] index, title in
-            print("index:\(index), title: \(title)")
             if index == 0 { // ios
                 teamLabel.configureTeamLabel(imageName: HipoImages.appleLogo, text: "iOS Team", hipoLabel: &teamLabel)
                 

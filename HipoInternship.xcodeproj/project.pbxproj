@@ -14,6 +14,12 @@
 		721E000E26132C3300EC0EBB /* PersistentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721E000D26132C3300EC0EBB /* PersistentManager.swift */; };
 		721E001126133F8C00EC0EBB /* HipoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721E001026133F8C00EC0EBB /* HipoError.swift */; };
 		721E001D2614E9FB00EC0EBB /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 721E001C2614E9FB00EC0EBB /* UIViewController+Ext.swift */; };
+		7241086F261613FB000CFF2B /* MembersInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241086E261613FB000CFF2B /* MembersInfoViewController.swift */; };
+		72410872261616A9000CFF2B /* GithubInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72410871261616A9000CFF2B /* GithubInfoModel.swift */; };
+		724108752616172F000CFF2B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724108742616172F000CFF2B /* NetworkManager.swift */; };
+		7241087A2616240D000CFF2B /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724108792616240D000CFF2B /* UIImageView+Ext.swift */; };
+		7241087D261634A6000CFF2B /* HipoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241087C261634A6000CFF2B /* HipoImageView.swift */; };
+		7241088026167FE8000CFF2B /* HipoStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241087F26167FE8000CFF2B /* HipoStackView.swift */; };
 		72644C8D260FBDC500D95466 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644C8C260FBDC500D95466 /* AppDelegate.swift */; };
 		72644C8F260FBDC500D95466 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644C8E260FBDC500D95466 /* SceneDelegate.swift */; };
 		72644C91260FBDC500D95466 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644C90260FBDC500D95466 /* ViewController.swift */; };
@@ -45,6 +51,12 @@
 		721E000D26132C3300EC0EBB /* PersistentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistentManager.swift; sourceTree = "<group>"; };
 		721E001026133F8C00EC0EBB /* HipoError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipoError.swift; sourceTree = "<group>"; };
 		721E001C2614E9FB00EC0EBB /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		7241086E261613FB000CFF2B /* MembersInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembersInfoViewController.swift; sourceTree = "<group>"; };
+		72410871261616A9000CFF2B /* GithubInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubInfoModel.swift; sourceTree = "<group>"; };
+		724108742616172F000CFF2B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		724108792616240D000CFF2B /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
+		7241087C261634A6000CFF2B /* HipoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipoImageView.swift; sourceTree = "<group>"; };
+		7241087F26167FE8000CFF2B /* HipoStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipoStackView.swift; sourceTree = "<group>"; };
 		72644C89260FBDC500D95466 /* HipoInternship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HipoInternship.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72644C8C260FBDC500D95466 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72644C8E260FBDC500D95466 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,9 +143,9 @@
 			children = (
 				72644CAD260FBE7500D95466 /* Utilities */,
 				72644CAC260FBE6C00D95466 /* Manager */,
+				72644CA8260FBE5500D95466 /* Model */,
 				72644CAA260FBE6100D95466 /* Resource */,
 				72644CA9260FBE5D00D95466 /* Extension */,
-				72644CA8260FBE5500D95466 /* Model */,
 				72644CA7260FBE5200D95466 /* View */,
 				72644CA3260FBE3000D95466 /* Controller */,
 				72644CA2260FBE2800D95466 /* Base */,
@@ -159,6 +171,7 @@
 			children = (
 				720842CD2610901A00510058 /* AddNewMembersScreen */,
 				720842CC2610900800510058 /* MembersScreen */,
+				72D49E472616900C000A0682 /* MembersInfoScreen */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				72644CCC260FC00600D95466 /* HipoModel.swift */,
+				72410871261616A9000CFF2B /* GithubInfoModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +199,7 @@
 			children = (
 				72644CB2260FBE9200D95466 /* String+Ext.swift */,
 				721E001C2614E9FB00EC0EBB /* UIViewController+Ext.swift */,
+				724108792616240D000CFF2B /* UIImageView+Ext.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -210,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				720842D82610AC7200510058 /* DataLoader.swift */,
+				724108742616172F000CFF2B /* NetworkManager.swift */,
 				721E000D26132C3300EC0EBB /* PersistentManager.swift */,
 				721E001026133F8C00EC0EBB /* HipoError.swift */,
 			);
@@ -257,6 +273,8 @@
 				72967805261116E7006C8ADC /* TextField */,
 				72644CB5260FBE9700D95466 /* Label */,
 				72644CB6260FBE9D00D95466 /* Button */,
+				72D49E4526168FE6000A0682 /* ImageView */,
+				72D49E4626168FED000A0682 /* StackView */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -277,6 +295,30 @@
 				72967802261116E3006C8ADC /* HipoTextField.swift */,
 			);
 			path = TextField;
+			sourceTree = "<group>";
+		};
+		72D49E4526168FE6000A0682 /* ImageView */ = {
+			isa = PBXGroup;
+			children = (
+				7241087C261634A6000CFF2B /* HipoImageView.swift */,
+			);
+			path = ImageView;
+			sourceTree = "<group>";
+		};
+		72D49E4626168FED000A0682 /* StackView */ = {
+			isa = PBXGroup;
+			children = (
+				7241087F26167FE8000CFF2B /* HipoStackView.swift */,
+			);
+			path = StackView;
+			sourceTree = "<group>";
+		};
+		72D49E472616900C000A0682 /* MembersInfoScreen */ = {
+			isa = PBXGroup;
+			children = (
+				7241086E261613FB000CFF2B /* MembersInfoViewController.swift */,
+			);
+			path = MembersInfoScreen;
 			sourceTree = "<group>";
 		};
 		B29CB0FA436056E180E1DE46 /* Frameworks */ = {
@@ -406,14 +448,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7241087A2616240D000CFF2B /* UIImageView+Ext.swift in Sources */,
 				72644CB3260FBE9200D95466 /* String+Ext.swift in Sources */,
 				72644CCD260FC00600D95466 /* HipoModel.swift in Sources */,
 				720842D92610AC7200510058 /* DataLoader.swift in Sources */,
+				724108752616172F000CFF2B /* NetworkManager.swift in Sources */,
 				72644CC0260FBEC800D95466 /* ButtonViewController.swift in Sources */,
 				72644CB9260FBEB700D95466 /* HipoLabel.swift in Sources */,
 				72644CB0260FBE8B00D95466 /* Constants.swift in Sources */,
 				72644CA5260FBE4700D95466 /* MembersViewController.swift in Sources */,
 				72644C91260FBDC500D95466 /* ViewController.swift in Sources */,
+				72410872261616A9000CFF2B /* GithubInfoModel.swift in Sources */,
+				7241086F261613FB000CFF2B /* MembersInfoViewController.swift in Sources */,
 				721E001D2614E9FB00EC0EBB /* UIViewController+Ext.swift in Sources */,
 				720842D02610A17000510058 /* HipoButton.swift in Sources */,
 				72967803261116E3006C8ADC /* HipoTextField.swift in Sources */,
@@ -421,7 +467,9 @@
 				720842EC2610FCD600510058 /* DropDownCell.swift in Sources */,
 				721E001126133F8C00EC0EBB /* HipoError.swift in Sources */,
 				72644C8F260FBDC500D95466 /* SceneDelegate.swift in Sources */,
+				7241088026167FE8000CFF2B /* HipoStackView.swift in Sources */,
 				72644CBD260FBEC200D95466 /* MembersCell.swift in Sources */,
+				7241087D261634A6000CFF2B /* HipoImageView.swift in Sources */,
 				721E000E26132C3300EC0EBB /* PersistentManager.swift in Sources */,
 				72644CDA261083CD00D95466 /* AddNewMemberViewController.swift in Sources */,
 			);

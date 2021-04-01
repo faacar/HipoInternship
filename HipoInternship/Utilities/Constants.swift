@@ -34,4 +34,6 @@ enum HipoImages {
     static let yearsInHipo = "hipoLogo"
     static let positionImage = "keyboardIcon"
     static let teamImage = "teamIcon"
+    static let imagePlaceHolder = "placeHolder"
+    static let shareImage = "square.and.arrow.up"
 }
