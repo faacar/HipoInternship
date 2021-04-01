@@ -26,8 +26,9 @@ class MembersViewController: UIViewController {
         configureNavigationController()
         configureTableView()
         configureUI()
+        
+        buttonViewController.delegate = self
     }
-
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -38,7 +39,6 @@ class MembersViewController: UIViewController {
             
             hipoData.append(DataLoader().hipoModel)
             PersistenceManager.save(hipoMembers: hipoData)
-            print("test:\(hipoData)")
         }
         hipoData = PersistenceManager.load()
         tableView.reloadData()
@@ -84,7 +84,6 @@ class MembersViewController: UIViewController {
             make.right.equalToSuperview().offset(-25)
             make.height.equalToSuperview().multipliedBy(0.18)
         }
-
     }
 }
 
@@ -96,14 +95,12 @@ extension MembersViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return hipoData[0].members.count
+        return PersistenceManager.load()[0].members.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: MembersCell.cellId) as! MembersCell
-        print("row:\(indexPath.row)")
-        print("section:\(indexPath.section)")
-        cell.membersNameLabel.text = hipoData[0].members[indexPath.section].name
+        cell.membersNameLabel.text = PersistenceManager.load()[0].members[indexPath.section].name
         return cell
     }
     
@@ -116,5 +113,36 @@ extension MembersViewController: UITableViewDelegate, UITableViewDataSource {
         let headerView = UIView()
         headerView.backgroundColor = UIColor.clear
         return headerView
+    }
+}
+
+//MARK: - Extension SorrtButtonDelegate
+
+extension MembersViewController: SortButtonDelegate {
+
+    func sortMembers(char: Character){
+        var hipoData = PersistenceManager.load()
+        var members = hipoData[0].members
+
+        members.sort(by: {
+            let userFirst = $0.name.lowercased()
+            let userSecond = $1.name.lowercased()
+
+            if userFirst.countNumberOfOccurrences(character: char) > userSecond.countNumberOfOccurrences(character: char) { // find the mosst occurrences char
+                return true
+            } else if userFirst.countNumberOfOccurrences(character: char) == userSecond.countNumberOfOccurrences(character: char) &&
+                        userFirst.count != userSecond.count { // char is eqeual, return long one
+                return userFirst.count > userSecond.count ? true : false
+            } else if userFirst.countNumberOfOccurrences(character: char) == userSecond.countNumberOfOccurrences(character: char) &&
+                        userFirst.count == userSecond.count {// length is equeal return alphabetically
+                return userFirst < userSecond ? true : false
+            } else { // return second one
+                return false
+            }
+        })
+        hipoData[0].members = members
+        PersistenceManager.save(hipoMembers: hipoData)
+
+        tableView.reloadData()
     }
 }

@@ -8,16 +8,23 @@
 import UIKit
 import SnapKit
 
+protocol SortButtonDelegate {
+    func sortMembers(char: Character)
+}
+
 class ButtonViewController: UIViewController {
+        
+    var hipoModel = [HipoModel]()
     
     private lazy var sortMembersButton = HipoButton(backgroundColor: HipoColors.grayButtonColor, title: "SORT MEMBERS")
     private lazy var addNewMemberButton = HipoButton(backgroundColor: HipoColors.greenButtonColor, title: "ADD NEW MEMBER")
+    
+    var delegate: SortButtonDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureButton()
         configureUI()
-        
     }
     
     private func configureButton() {
@@ -48,18 +55,14 @@ class ButtonViewController: UIViewController {
 //MARK: - Button Actions
     
     @objc func sortMembersButtonClicked() {
-        //sorting thing
-        print(PersistenceManager.load())
+        delegate?.sortMembers(char: "a")
     }
     
-    @objc func addNewMemberButtonClicked() {     
+    @objc func addNewMemberButtonClicked() {
         let vc = AddNewMemberViewController()
         let navController = UINavigationController(rootViewController: vc)
         navController.modalPresentationStyle = .formSheet
         present(navController, animated: true, completion: nil)
-        
-        
-        
     }
     
 }
