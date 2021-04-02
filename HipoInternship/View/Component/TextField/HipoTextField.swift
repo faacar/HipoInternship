@@ -21,7 +21,6 @@ class HipoTextField: UITextField {
     }
     
     private func configure(_ pHolder: String, _ leftImageName: String) {
-        
         let padding = 8
         let size = 20
         
@@ -43,10 +42,8 @@ class HipoTextField: UITextField {
         backgroundColor = HipoColors.cellBackgroundColor
         layer.borderWidth = 3.0
         layer.borderColor = HipoColors.cellBorderColor?.cgColor
-        
     }
     
-
     override func textRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }

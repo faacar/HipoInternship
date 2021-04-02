@@ -8,12 +8,7 @@
 import UIKit
 
 class HipoLabel: UILabel {
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        configure()
-    }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
@@ -35,11 +30,8 @@ class HipoLabel: UILabel {
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.9
         lineBreakMode = .byTruncatingTail
-
     }
-    
     let test = NSTextAttachment()
-    
 }
 
 extension HipoLabel {

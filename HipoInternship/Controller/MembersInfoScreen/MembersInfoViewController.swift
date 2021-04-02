@@ -55,7 +55,7 @@ class MembersInfoViewController: UIViewController {
             make.left.equalToSuperview().offset(70)
             make.top.equalTo(view.safeAreaLayoutGuide).offset(10)
             make.right.equalToSuperview().offset(-70)
-            make.bottom.equalToSuperview().multipliedBy(0.36)
+            make.bottom.equalToSuperview().multipliedBy(0.41)
         }
     }
     

@@ -14,7 +14,8 @@ class AddNewMemberViewController: UIViewController {
     let dropDown = DropDown()
     let dropDownView = UIView()
     
-    lazy var stackView = UIStackView()
+    private lazy var stackView = UIStackView(arrangedSubviews: [nameTextField, ageTextField, locationTextField, githubTextField, positionTextField, yearsInHipoTextField, dropDownView])
+
     var hipoMembers = [HipoModel]()
     var teamName: String!
 
@@ -60,21 +61,12 @@ class AddNewMemberViewController: UIViewController {
         stackView.distribution = .fillEqually
         stackView.spacing = 10
         
-        stackView.addArrangedSubview(nameTextField)
-        stackView.addArrangedSubview(ageTextField)
-        stackView.addArrangedSubview(locationTextField)
-        stackView.addArrangedSubview(githubTextField)
-        stackView.addArrangedSubview(positionTextField)
-        stackView.addArrangedSubview(yearsInHipoTextField)
-        stackView.addArrangedSubview(dropDownView)
-        
         stackView.snp.makeConstraints { (make) in
             make.top.equalTo(view.safeAreaLayoutGuide).offset(20)
             make.left.equalToSuperview().offset(10)
             make.right.equalToSuperview().offset(-10)
             make.height.equalToSuperview().multipliedBy(0.50)
         }
-
     }
     
     private func configureTextFields() {
@@ -212,4 +204,3 @@ extension AddNewMemberViewController: UITextFieldDelegate {
         return true
     }
 }
-

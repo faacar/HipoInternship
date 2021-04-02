@@ -149,7 +149,7 @@ extension MembersViewController: SortButtonDelegate {
             let userFirst = $0.name.lowercased()
             let userSecond = $1.name.lowercased()
 
-            if userFirst.countNumberOfOccurrences(character: char) > userSecond.countNumberOfOccurrences(character: char) { // find the mosst occurrences char
+            if userFirst.countNumberOfOccurrences(character: char) > userSecond.countNumberOfOccurrences(character: char) { // find the most occurrences char
                 return true
             } else if userFirst.countNumberOfOccurrences(character: char) == userSecond.countNumberOfOccurrences(character: char) &&
                         userFirst.count != userSecond.count { // char is eqeual, return long one

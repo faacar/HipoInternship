@@ -27,8 +27,5 @@ class HipoButton: UIButton {
         if let customFont = UIFont(name: HipoFonts.robotoRegular, size: 16) {
             titleLabel!.font = UIFontMetrics(forTextStyle: .body).scaledFont(for: customFont)
         }
-        
-        
-        
     }
 }
