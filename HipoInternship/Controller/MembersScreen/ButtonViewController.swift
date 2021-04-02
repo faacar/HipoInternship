@@ -16,8 +16,8 @@ class ButtonViewController: UIViewController {
         
     var hipoModel = [HipoModel]()
     
-    private lazy var sortMembersButton = HipoButton(backgroundColor: HipoColors.grayButtonColor, title: "SORT MEMBERS")
-    private lazy var addNewMemberButton = HipoButton(backgroundColor: HipoColors.greenButtonColor, title: "ADD NEW MEMBER")
+    private lazy var sortMembersButton = HipoButton(backgroundColor: HipoColors.grayButtonColor!, title: "SORT MEMBERS")
+    private lazy var addNewMemberButton = HipoButton(backgroundColor: HipoColors.greenButtonColor!, title: "ADD NEW MEMBER")
     
     var delegate: SortButtonDelegate?
     

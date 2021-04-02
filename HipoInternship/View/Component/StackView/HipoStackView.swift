@@ -32,17 +32,17 @@ class HipoStackView: UIStackView {
         axis = .horizontal
         distribution = .fill
         layer.borderWidth = 3.0
-        layer.borderColor = HipoColors.cellBorderColor.cgColor
+        layer.borderColor = HipoColors.cellBorderColor?.cgColor
         layer.masksToBounds = true
         layer.cornerRadius = 20.0
         
         titleLabel.snp.makeConstraints { (make) in
             make.width.equalToSuperview().multipliedBy(0.32)
-            //make.left.equalToSuperview().offset(8)
+            make.left.equalToSuperview().offset(8)
         }
         descriptionLabel.snp.makeConstraints { (make) in
             make.width.equalToSuperview().multipliedBy(0.68)
-            //make.right.equalToSuperview().offset(-8)
+            make.right.equalToSuperview().offset(-8)
         }
     }
 }

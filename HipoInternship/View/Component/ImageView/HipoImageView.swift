@@ -20,7 +20,7 @@ class HipoImageView: UIImageView {
     
     private func configure() {
         layer.borderWidth = 2.0
-        layer.borderColor = HipoColors.cellBorderColor.cgColor
+        layer.borderColor = HipoColors.cellBorderColor?.cgColor
         layer.masksToBounds = true
         layer.cornerRadius = 15.0
         sizeToFit()

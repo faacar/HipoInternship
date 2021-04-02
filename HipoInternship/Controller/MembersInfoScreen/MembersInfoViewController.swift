@@ -69,7 +69,7 @@ class MembersInfoViewController: UIViewController {
             make.top.equalTo(githubAvatarImageView.snp.bottom).offset(12)
             make.left.equalToSuperview().offset(25)
             make.right.equalToSuperview().offset(-25)
-            make.height.equalToSuperview().multipliedBy(0.50)
+            make.height.equalToSuperview().multipliedBy(0.48)
         }
     }
     

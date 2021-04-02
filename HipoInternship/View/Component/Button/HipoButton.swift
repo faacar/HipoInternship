@@ -21,7 +21,7 @@ class HipoButton: UIButton {
     }
     
     private func configure() {
-        setTitleColor(.secondarySystemBackground, for: .normal)
+        setTitleColor(.white, for: .normal)
         layer.masksToBounds = true
         layer.cornerRadius = 25.0
         if let customFont = UIFont(name: HipoFonts.robotoRegular, size: 16) {

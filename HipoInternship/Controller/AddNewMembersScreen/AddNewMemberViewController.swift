@@ -25,7 +25,7 @@ class AddNewMemberViewController: UIViewController {
     private lazy var positionTextField = HipoTextField(pHolder: "Position", imageName: HipoImages.positionImage)
     private lazy var yearsInHipoTextField = HipoTextField(pHolder: "Years in Hipo", imageName: HipoImages.yearsInHipo)
     private lazy var teamLabel = HipoLabel(fontSize: 17)
-    private lazy var saveButton = HipoButton(backgroundColor: HipoColors.greenButtonColor, title: "Save")
+    private lazy var saveButton = HipoButton(backgroundColor: HipoColors.greenButtonColor!, title: "Save")
             
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -122,7 +122,7 @@ class AddNewMemberViewController: UIViewController {
         dropDownView.layer.masksToBounds = true
         dropDownView.layer.cornerRadius = 20.0
         dropDownView.layer.borderWidth = 3.0
-        dropDownView.layer.borderColor = HipoColors.cellBorderColor.cgColor
+        dropDownView.layer.borderColor = HipoColors.cellBorderColor?.cgColor
         
         teamLabel.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(10)
@@ -140,7 +140,7 @@ class AddNewMemberViewController: UIViewController {
 
         dropDown.customCellConfiguration = { index, title, cell in
             guard let cell = cell as? CustomDropDownCell else { return }
-            let appleLogo = UIImage(systemName: HipoImages.appleLogo)?.withTintColor(HipoColors.appleLogoColor, renderingMode: .alwaysOriginal)
+            let appleLogo = UIImage(systemName: HipoImages.appleLogo)?.withTintColor(HipoColors.appleLogoColor!, renderingMode: .alwaysOriginal)
             let androidLogo = UIImage(named: HipoImages.androidLogo)
             cell.positionImageView.image = index == 0 ? appleLogo : androidLogo
         }

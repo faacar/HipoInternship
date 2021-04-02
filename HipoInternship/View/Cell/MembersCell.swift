@@ -28,7 +28,7 @@ class MembersCell: UITableViewCell {
         layer.cornerRadius = 20.0
         backgroundColor = HipoColors.cellBackgroundColor
         layer.borderWidth = 2.0
-        layer.borderColor = HipoColors.cellBorderColor.cgColor
+        layer.borderColor = HipoColors.cellBorderColor?.cgColor
         selectionStyle = .none
         
         let sentImage = UIImage(systemName: "arrow.forward")

@@ -42,7 +42,7 @@ class HipoTextField: UITextField {
         layer.cornerRadius = 20.0
         backgroundColor = HipoColors.cellBackgroundColor
         layer.borderWidth = 3.0
-        layer.borderColor = HipoColors.cellBorderColor.cgColor
+        layer.borderColor = HipoColors.cellBorderColor?.cgColor
         
     }
     
