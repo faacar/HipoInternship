@@ -118,13 +118,6 @@
 			path = AddNewMembersScreen;
 			sourceTree = "<group>";
 		};
-		721591882617424D009EC000 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
-			sourceTree = "<group>";
-		};
 		72644C80260FBDC500D95466 = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +148,6 @@
 				72644CA3260FBE3000D95466 /* Controller */,
 				72644CA2260FBE2800D95466 /* Base */,
 				72644C95260FBDC800D95466 /* Assets.xcassets */,
-				721591882617424D009EC000 /* New Group */,
 				72644C9A260FBDC800D95466 /* Info.plist */,
 			);
 			path = HipoInternship;
