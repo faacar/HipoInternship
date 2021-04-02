@@ -22,7 +22,6 @@
 		7241088026167FE8000CFF2B /* HipoStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7241087F26167FE8000CFF2B /* HipoStackView.swift */; };
 		72644C8D260FBDC500D95466 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644C8C260FBDC500D95466 /* AppDelegate.swift */; };
 		72644C8F260FBDC500D95466 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644C8E260FBDC500D95466 /* SceneDelegate.swift */; };
-		72644C91260FBDC500D95466 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644C90260FBDC500D95466 /* ViewController.swift */; };
 		72644C96260FBDC800D95466 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72644C95260FBDC800D95466 /* Assets.xcassets */; };
 		72644C99260FBDC800D95466 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72644C97260FBDC800D95466 /* LaunchScreen.storyboard */; };
 		72644CA5260FBE4700D95466 /* MembersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72644CA4260FBE4700D95466 /* MembersViewController.swift */; };
@@ -60,7 +59,6 @@
 		72644C89260FBDC500D95466 /* HipoInternship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HipoInternship.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72644C8C260FBDC500D95466 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72644C8E260FBDC500D95466 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		72644C90260FBDC500D95466 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		72644C95260FBDC800D95466 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72644C98260FBDC800D95466 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		72644C9A260FBDC800D95466 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -120,6 +118,13 @@
 			path = AddNewMembersScreen;
 			sourceTree = "<group>";
 		};
+		721591882617424D009EC000 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		72644C80260FBDC500D95466 = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +155,7 @@
 				72644CA3260FBE3000D95466 /* Controller */,
 				72644CA2260FBE2800D95466 /* Base */,
 				72644C95260FBDC800D95466 /* Assets.xcassets */,
+				721591882617424D009EC000 /* New Group */,
 				72644C9A260FBDC800D95466 /* Info.plist */,
 			);
 			path = HipoInternship;
@@ -160,7 +166,6 @@
 			children = (
 				72644C8C260FBDC500D95466 /* AppDelegate.swift */,
 				72644C8E260FBDC500D95466 /* SceneDelegate.swift */,
-				72644C90260FBDC500D95466 /* ViewController.swift */,
 				72644C97260FBDC800D95466 /* LaunchScreen.storyboard */,
 			);
 			path = Base;
@@ -457,7 +462,6 @@
 				72644CB9260FBEB700D95466 /* HipoLabel.swift in Sources */,
 				72644CB0260FBE8B00D95466 /* Constants.swift in Sources */,
 				72644CA5260FBE4700D95466 /* MembersViewController.swift in Sources */,
-				72644C91260FBDC500D95466 /* ViewController.swift in Sources */,
 				72410872261616A9000CFF2B /* GithubInfoModel.swift in Sources */,
 				7241086F261613FB000CFF2B /* MembersInfoViewController.swift in Sources */,
 				721E001D2614E9FB00EC0EBB /* UIViewController+Ext.swift in Sources */,

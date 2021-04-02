@@ -38,11 +38,11 @@ class HipoStackView: UIStackView {
         
         titleLabel.snp.makeConstraints { (make) in
             make.width.equalToSuperview().multipliedBy(0.32)
-            make.left.equalToSuperview().offset(8)
+            //make.left.equalToSuperview().offset(8)
         }
         descriptionLabel.snp.makeConstraints { (make) in
             make.width.equalToSuperview().multipliedBy(0.68)
-            make.right.equalToSuperview().offset(-8)
+            //make.right.equalToSuperview().offset(-8)
         }
     }
 }

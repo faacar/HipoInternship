@@ -29,6 +29,7 @@ class MembersCell: UITableViewCell {
         backgroundColor = HipoColors.cellBackgroundColor
         layer.borderWidth = 2.0
         layer.borderColor = HipoColors.cellBorderColor.cgColor
+        selectionStyle = .none
         
         let sentImage = UIImage(systemName: "arrow.forward")
         let sentImageView = UIImageView(image: sentImage)

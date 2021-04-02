@@ -28,12 +28,14 @@ class HipoLabel: UILabel {
     
     private func configure() {
         text = "Test text"
+        //textColor = UIColor.label
         textColor = .label
         numberOfLines = 0
         textAlignment = .left
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.9
         lineBreakMode = .byTruncatingTail
+
     }
     
     let test = NSTextAttachment()

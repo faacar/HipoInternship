@@ -84,6 +84,12 @@ class MembersInfoViewController: UIViewController {
     }
     
     @objc func shareButtonTapped() {
-        print("button tapped")
+        let text = membersInfo.name
+        let image = githubAvatarImageView.image
+        let myWebsite = NSURL(string:"https://api.github.com/users/\(membersInfo.github)")
+        let shareAll = [text , image! , myWebsite!] as [Any]
+        let activityViewController = UIActivityViewController(activityItems: shareAll, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        self.present(activityViewController, animated: true, completion: nil)
     }
 }

@@ -58,7 +58,6 @@ class MembersViewController: UIViewController {
         
         tableView.rowHeight = 65
         tableView.separatorStyle = .none
-
     }
     
     private func configureNavigationController() {
@@ -121,6 +120,20 @@ extension MembersViewController: UITableViewDelegate, UITableViewDataSource {
         let headerView = UIView()
         headerView.backgroundColor = UIColor.clear
         return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete Member") { (action, sourceView, completionHandler) in
+            
+            self.hipoData[0].members.remove(at: indexPath.section)
+            PersistenceManager.save(hipoMembers: self.hipoData)
+            tableView.reloadData()
+            completionHandler(true)
+        }
+        
+        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction])
+        return swipeConfiguration
     }
 }
 
