@@ -40,7 +40,7 @@ extension String {
 - If two or more strings contain the same amount for the character, sort these according to their length. 
 - If two or more strings contain the same amount for the character and have the same length, sort these in alphabetical order.
 ```swift
-    func sortMembers(char: Character){
+func sortMembers(char: Character){
         var hipoData = PersistenceManager.load()
         var members = hipoData[0].members
 
@@ -48,21 +48,15 @@ extension String {
             let userFirst = $0.name.lowercased()
             let userSecond = $1.name.lowercased()
 
-            if userFirst.countNumberOfOccurrences(character: char) > 
-            userSecond.countNumberOfOccurrences(character: char) { // find the most occurrences char
+            if userFirst.countNumberOfOccurrences(character: char) > userSecond.countNumberOfOccurrences(character: char) { // find the most occurrences char
                 return true
-            }
-            else if userFirst.countNumberOfOccurrences(character: char) == 
-            userSecond.countNumberOfOccurrences(character: char) &&
+            } else if userFirst.countNumberOfOccurrences(character: char) == userSecond.countNumberOfOccurrences(character: char) &&
                         userFirst.count != userSecond.count { // char is eqeual, return long one
                 return userFirst.count > userSecond.count ? true : false
-            }
-            else if userFirst.countNumberOfOccurrences(character: char) == 
-            userSecond.countNumberOfOccurrences(character: char) &&
+            } else if userFirst.countNumberOfOccurrences(character: char) == userSecond.countNumberOfOccurrences(character: char) &&
                         userFirst.count == userSecond.count {// length is equeal return alphabetically
                 return userFirst < userSecond ? true : false
-            }
-            else { // return second one
+            } else { // return second one
                 return false
             }
         })

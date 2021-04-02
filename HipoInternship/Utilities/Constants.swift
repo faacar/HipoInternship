@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 enum HipoColors {
     static let cellArrow = UIColor(named: "cellArrow")
     static let cellBorderColor = UIColor(named: "cellBorderColor")
@@ -16,7 +15,6 @@ enum HipoColors {
     static let greenButtonColor = UIColor(named: "greenButtonColor")
     static let appleLogoColor = UIColor(named: "appleLogoColor")
 }
-
 
 enum HipoFonts {
     static let robotoBlack = "Roboto-Black"

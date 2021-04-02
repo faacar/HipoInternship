@@ -22,5 +22,4 @@ class CustomDropDownCell: DropDownCell {
         super.setSelected(selected, animated: animated)
 
     }
-    
 }
