@@ -17,7 +17,7 @@ class AddNewMemberViewController: UIViewController {
     private lazy var stackView = UIStackView(arrangedSubviews: [nameTextField, ageTextField, locationTextField, githubTextField, positionTextField, yearsInHipoTextField, dropDownView])
 
     var hipoMembers = [HipoModel]()
-    var teamName: String!
+    var teamName = ""
 
     private lazy var nameTextField = HipoTextField(pHolder: "Name", imageName: HipoImages.nameImage)
     private lazy var ageTextField = HipoTextField(pHolder: "Age", imageName: HipoImages.ageImage)
@@ -168,11 +168,12 @@ class AddNewMemberViewController: UIViewController {
     }
     
     @objc func saveButtonClicked() {
-        if nameTextField.text == "" || ageTextField.text == "" || locationTextField.text == "" || githubTextField.text == "" || positionTextField.text == "" || yearsInHipoTextField.text == "" || teamName == "" { // team name bug
+        if nameTextField.text == "" || ageTextField.text == "" || locationTextField.text == "" || githubTextField.text == "" || positionTextField.text == "" || yearsInHipoTextField.text == "" || teamName == ""{
             presentAlert(title: "Missing Place", message: "We can't proceed because one of the fields is blank. Please note that all fields are required.")
             return
         }
         saveData()
+        //delegate?.dismissVC()
         dismiss(animated: true, completion: nil)
     }
     
@@ -185,7 +186,6 @@ class AddNewMemberViewController: UIViewController {
                             hipo: hipoInfo)
         hipoMembers = PersistenceManager.load()
         hipoMembers[0].members.append(newMemberInfo)
-        print(hipoMembers)
         PersistenceManager.save(hipoMembers: hipoMembers)
     }
 }

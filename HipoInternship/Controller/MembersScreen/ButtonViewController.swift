@@ -1,6 +1,6 @@
 //
 //  ButtonView.swift
-//  Hipo
+//  HipoInternship
 //
 //  Created by Ahmet Acar on 27.03.2021.
 //

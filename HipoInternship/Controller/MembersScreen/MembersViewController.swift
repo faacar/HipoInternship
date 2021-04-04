@@ -1,6 +1,6 @@
 //
 //  MemberViewController.swift
-//  Hipo
+//  HipoInternship
 //
 //  Created by Ahmet Acar on 27.03.2021.
 //
@@ -19,6 +19,8 @@ class MembersViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        
+        buttonViewController.delegate = self
 
         hipoData = PersistenceManager.load()
         
@@ -26,8 +28,6 @@ class MembersViewController: UIViewController {
         configureNavigationController()
         configureTableView()
         configureUI()
-        
-        buttonViewController.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
