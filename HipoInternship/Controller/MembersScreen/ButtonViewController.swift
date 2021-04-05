@@ -61,7 +61,7 @@ class ButtonViewController: UIViewController {
     @objc func addNewMemberButtonClicked() {
         let vc = AddNewMemberViewController()
         let navController = UINavigationController(rootViewController: vc)
-        navController.modalPresentationStyle = .formSheet
+        navController.modalPresentationStyle = .fullScreen
         present(navController, animated: true, completion: nil)
     }
     
